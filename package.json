@@ -8,6 +8,8 @@
     "registry:build": "shadcn build",
     "registry:check": "pnpm registry:build && node scripts/check-registry.mjs",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint . --concurrency=auto --max-warnings=0",
+    "lint:fix": "eslint . --fix --concurrency=auto --max-warnings=0",
     "validate": "pnpm registry:check && pnpm typecheck",
     "prepare": "husky",
     "prettier": "prettier --ignore-unknown --write ."
@@ -15,6 +17,9 @@
   "devDependencies": {
     "@types/node": "^25.6.2",
     "@types/react": "^19.2.14",
+    "eslint": "^10.4.1",
+    "eslint-config-ts-prefixer": "^4.2.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
     "prettier": "^3.8.3",
