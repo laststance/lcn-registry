@@ -1,4 +1,4 @@
-# Lastcn Registry
+# LCN Registry
 
 Open React hooks distributed as a shadcn custom registry.
 
@@ -10,7 +10,7 @@ effect hooks into your project's configured hooks directory.
 Install directly from the public registry item:
 
 ```bash
-npx shadcn@latest add https://raw.githubusercontent.com/laststance/lastcn-registry/main/public/r/lifecycle-effects.json
+npx shadcn@latest add https://raw.githubusercontent.com/laststance/lcn-registry/main/public/r/lifecycle-effects.json
 ```
 
 Or register a namespace in `components.json`:
@@ -18,7 +18,7 @@ Or register a namespace in `components.json`:
 ```json
 {
   "registries": {
-    "@lastcn-registry": "https://raw.githubusercontent.com/laststance/lastcn-registry/main/public/r/{name}.json"
+    "@lcn-registry": "https://raw.githubusercontent.com/laststance/lcn-registry/main/public/r/{name}.json"
   }
 }
 ```
@@ -26,13 +26,13 @@ Or register a namespace in `components.json`:
 Then install by name:
 
 ```bash
-npx shadcn@latest add @lastcn-registry/lifecycle-effects
+npx shadcn@latest add @lcn-registry/lifecycle-effects
 ```
 
 Before installing, inspect the exact code payload:
 
 ```bash
-npx shadcn@latest view https://raw.githubusercontent.com/laststance/lastcn-registry/main/public/r/lifecycle-effects.json
+npx shadcn@latest view https://raw.githubusercontent.com/laststance/lcn-registry/main/public/r/lifecycle-effects.json
 ```
 
 ## Lifecycle Effects

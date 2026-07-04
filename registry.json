@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "lastcn-registry",
-  "homepage": "https://github.com/laststance/lastcn-registry",
+  "name": "lcn-registry",
+  "homepage": "https://github.com/laststance/lcn-registry",
   "items": [
     {
       "name": "lifecycle-effects",
