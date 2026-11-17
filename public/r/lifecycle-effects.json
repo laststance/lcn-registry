@@ -18,7 +18,7 @@
     },
     {
       "path": "registry/default/lifecycle-effects/use-unmount-effect.ts",
-      "content": "import { useEffect, useEffectEvent } from 'react'\n\n/**\n * Run a callback only when the component unmounts.\n *\n * The callback is wrapped in React's Effect Event API so the cleanup phase\n * calls the latest callback even if props or state changed after mount.\n *\n * @param callback - Teardown work to run during unmount.\n * @returns Nothing; React invokes `callback` from the cleanup phase.\n *\n * @example\n * useUnmountEffect(() => {\n *   window.clearTimeout(timerId)\n * })\n */\nexport function useUnmountEffect(callback: () => void): void {\n  const onUnmount = useEffectEvent(callback)\n\n  useEffect(() => {\n    return () => onUnmount()\n  }, [])\n}\n",
+      "content": "import { useEffect, useEffectEvent } from 'react'\n\n/**\n * Run a callback only when the component unmounts.\n *\n * The callback is wrapped in React's Effect Event API so the cleanup phase\n * calls the latest callback even if props or state changed after mount.\n *\n * @param callback - Teardown work to run during unmount.\n * @returns Nothing; React invokes `callback` from the cleanup phase.\n *\n * @example\n * useUnmountEffect(() => {\n *   window.clearTimeout(timerId)\n * })\n */\nexport function useUnmountEffect(callback: () => void): void {\n  const onUnmount = useEffectEvent(callback)\n\n  useEffect(() => {\n    return (): void => onUnmount()\n  }, [])\n}\n",
       "type": "registry:hook",
       "target": "@hooks/use-unmount-effect.ts"
     },
