@@ -1,4 +1,4 @@
-# LCN Registry
+# laststance-resistry
 
 Open React hooks distributed as a shadcn custom registry.
 
@@ -18,7 +18,7 @@ Or register a namespace in `components.json`:
 ```json
 {
   "registries": {
-    "@lcn-registry": "https://raw.githubusercontent.com/laststance/lcn-registry/main/public/r/{name}.json"
+    "@laststance-resistry": "https://raw.githubusercontent.com/laststance/lcn-registry/main/public/r/{name}.json"
   }
 }
 ```
@@ -26,7 +26,7 @@ Or register a namespace in `components.json`:
 Then install by name:
 
 ```bash
-npx shadcn@latest add @lcn-registry/lifecycle-effects
+npx shadcn@latest add @laststance-resistry/lifecycle-effects
 ```
 
 Before installing, inspect the exact code payload:
@@ -49,6 +49,10 @@ React 19+ is required because `useUnmountEffect` and `useUpdateEffect` use
 `useEffectEvent` to call the latest callback without forcing dependency churn.
 
 ## Development
+
+`pnpm typecheck` runs the native TypeScript 7 compiler. ESLint uses the
+TypeScript 6 compiler API through the `typescript` package alias, following
+[Microsoft's side-by-side setup](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0).
 
 ```bash
 pnpm install
